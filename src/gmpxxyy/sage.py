@@ -28,7 +28,7 @@ class ConversionZZMpz(Morphism):
 
     EXAMPLES::
 
-        sage: from gmpxxyy import mpz
+        sage: from gmpxxyy import mpz  # random output due to deprecation warnings
         sage: ZZ(mpz(1))
         1
 
