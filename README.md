@@ -35,14 +35,6 @@ mamba create -n gmpxxyy gmpxxyy
 conda activate gmpxxyy
 ```
 
-This installs the latest released version from [conda-forge](https://github.com/conda-forge/gmpxxyy-feedstock). Alternatively, you can also install the latest version from the `flatsurf` channel by adding `-c flatsurf` to the first command.
-
-## Run with binder in the Cloud
-
-You can try out this project in a very limited environment online by clicking this link:
-
-* **gmpxxyy** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flatsurf/gmpxxyy/master?filepath=doc%2Fbinder%2FSample.gmpxxyy.ipynb)
-
 ## Build from the Source Code Repository
 
 We are following an autoconf setup, i.e., you can install `src/gmpxxyy` with
