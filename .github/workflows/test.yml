@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         on: [ ubuntu-24.04, macos-15, macos-15-intel ]
-        environment: [ python-39, python-310, python-311, python-312 ]
+        environment: [ python-310, python-311, python-312 ]
         target:
           - test
         include:

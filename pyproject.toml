@@ -29,7 +29,6 @@ channels = ["conda-forge"]
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 
 [tool.pixi.environments]
-python-39 = ["python-39"]
 python-310 = ["python-310"]
 python-311 = ["python-311"]
 python-312 = ["python-312"]
@@ -56,9 +55,6 @@ valgrind = "*"
 
 [tool.pixi.feature.dev.target.linux.pypi-dependencies]
 pytest-valgrind = "*"
-
-[tool.pixi.feature.python-39.dependencies]
-python = "3.9.*"
 
 [tool.pixi.feature.python-310.dependencies]
 python = "3.10.*"
