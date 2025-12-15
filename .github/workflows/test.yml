@@ -9,22 +9,23 @@ concurrency:
 
 jobs:
   test-gmpxxyy:
-    runs-on: "{{ matrix.on }}"
+    runs-on: "${{ matrix.on }}"
     strategy:
       matrix:
-        environment: [ python-39, python-310, python-311, python-312 ]
         on: [ ubuntu-24.04, macos-15, macos-15-intel ]
+        environment: [ python-39, python-310, python-311, python-312 ]
         target:
-          - check
+          - test
         include:
-          - environment: dev
-            target: check-valgrind
+          - on: ubuntu-24.04
+            environment: dev
+            target: test-valgrind
     steps:
       - uses: actions/checkout@v4
         with: { submodules: recursive }
       - name: install valgrind and libc debug symbols
         run: sudo apt install libc6-dbg valgrind
-        if: ${{ matrix.target == 'check-valgrind' }}
+        if: ${{ matrix.target == 'test-valgrind' }}
       - uses: prefix-dev/setup-pixi@v0.8.4
         with:
           pixi-version: v0.61.0
